@@ -1,0 +1,42 @@
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+int main()
+
+{
+
+
+//variable
+double NetBalance , Payment , Interest , MonthlyInterest , AverageDailyBalance;
+
+int D1 , D2;
+
+MonthlyInterest = 0.097;
+
+//main code
+
+    cout  << fixed << showpoint << setprecision(2);
+    
+    cout << " Please enter your Balance: ";
+    cin >> NetBalance;
+    
+    cout << " Please, enter payment you've made: ";
+    cin >> Payment;
+    
+    cout << " Please, enter the number of days in the billing cycle: ";
+    cin >> D1;
+    
+    cout << " Please, enter number of days payment is made before billing cycle: ";
+    cin >> D2;
+    
+    cout  << " The interest per month is: " << MonthlyInterest << endl;
+    
+    cout << "Therefore the average daily balance is:" << (NetBalance * D1 - Payment * D2)/D1 << "Pesos" << endl;
+    
+    cout << "and the interest is: " << (AverageDailyBalance * MonthlyInterest) << "Pesos" << endl;
+    
+    return 0;
+}
